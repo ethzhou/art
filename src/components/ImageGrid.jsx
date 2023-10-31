@@ -1,3 +1,22 @@
+import ezhou_A from "../assets/images/pocket/ezhou_A.jpg";
+import Intimacy from "../assets/images/pocket/Intimacy.jpg";
+import ezhou_B from "../assets/images/pocket/ezhou_B.jpg";
+import jaw from "../assets/images/pocket/jaw.jpg";
+import gatsbyCopy from "../assets/images/pocket/gatsby copy.jpg";
+import Tyler from "../assets/images/pocket/Tyler.jpg";
+import Arda from "../assets/images/pocket/Arda.jpg";
+import Kai from "../assets/images/pocket/Kai.jpg";
+import Ryan from "../assets/images/pocket/Ryan.jpg";
+import rhapsody from "../assets/images/pocket/rhapsody.jpg";
+import self1 from "../assets/images/pocket/self1.jpg";
+import Kline from "../assets/images/pocket/Kline.jpg";
+import loveLetter from "../assets/images/pocket/love letter.jpg";
+import monArtCubiste from "../assets/images/pocket/mon art cubiste.jpg";
+import ezhou_C from "../assets/images/pocket/ezhou_C.jpg";
+import postamc12a2022 from "../assets/images/pocket/postamc12a2022.jpg";
+import prosetCopy from "../assets/images/pocket/proset copy.jpg";
+import unknown from "../assets/images/pocket/unknown.jpg";
+
 export default function ImageGrid() {
   return (
     <div className="relative grid grid-flow-dense auto-rows-[20rem] grid-cols-12 place-items-center gap-1">
@@ -5,7 +24,8 @@ export default function ImageGrid() {
         <img
           id="ezhou_A"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/ezhou_A.jpg"
+          // {ezhou_A}
+          src={ezhou_A}
           alt="ezhou_A"
         />
       </div>
@@ -13,7 +33,7 @@ export default function ImageGrid() {
         <img
           id="Intimacy"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/Intimacy.jpg"
+          src={Intimacy}
           alt="Intimacy"
         />
       </div>
@@ -21,7 +41,7 @@ export default function ImageGrid() {
         <img
           id="ezhou_B"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/ezhou_B.jpg"
+          src={ezhou_B}
           alt="ezhou_B"
         />
       </div>
@@ -29,7 +49,7 @@ export default function ImageGrid() {
         <img
           id="jaw"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/jaw.jpg"
+          src={jaw}
           alt="jaw"
         />
       </div>
@@ -37,7 +57,7 @@ export default function ImageGrid() {
         <img
           id="gatsby"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/gatsby copy.jpg"
+          src={gatsbyCopy}
           alt="gatsby"
         />
       </div>
@@ -45,7 +65,7 @@ export default function ImageGrid() {
         <img
           id="Tyler"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/Tyler.jpg"
+          src={Tyler}
           alt="Tyler"
         />
       </div>
@@ -53,7 +73,7 @@ export default function ImageGrid() {
         <img
           id="Arda"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/Arda.jpg"
+          src={Arda}
           alt="Arda"
         />
       </div>
@@ -61,7 +81,7 @@ export default function ImageGrid() {
         <img
           id="Kai"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/Kai.jpg"
+          src={Kai}
           alt="Kai"
         />
       </div>
@@ -69,7 +89,7 @@ export default function ImageGrid() {
         <img
           id="Ryan"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/Ryan.jpg"
+          src={Ryan}
           alt="Ryan"
         />
       </div>
@@ -77,7 +97,7 @@ export default function ImageGrid() {
         <img
           id="rhapsody"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/rhapsody.jpg"
+          src={rhapsody}
           alt="rhapsody"
         />
       </div>
@@ -85,7 +105,7 @@ export default function ImageGrid() {
         <img
           id="self1"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/self1.jpg"
+          src={self1}
           alt="self1"
         />
       </div>
@@ -93,7 +113,7 @@ export default function ImageGrid() {
         <img
           id="Kline"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/Kline.jpg"
+          src={Kline}
           alt="Kline"
         />
       </div>
@@ -101,7 +121,7 @@ export default function ImageGrid() {
         <img
           id="love letter"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/love letter.jpg"
+          src={loveLetter}
           alt="love letter"
         />
       </div>
@@ -109,7 +129,7 @@ export default function ImageGrid() {
         <img
           id="mon art cubiste"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/mon art cubiste.jpg"
+          src={monArtCubiste}
           alt="mon art cubiste"
         />
       </div>
@@ -117,7 +137,7 @@ export default function ImageGrid() {
         <img
           id="ezhou_C"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/ezhou_C.jpg"
+          src={ezhou_C}
           alt="ezhou_C"
         />
       </div>
@@ -125,7 +145,7 @@ export default function ImageGrid() {
         <img
           id="postamc12a2022"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/postamc12a2022.jpg"
+          src={postamc12a2022}
           alt="postamc12a2022"
         />
       </div>
@@ -133,7 +153,7 @@ export default function ImageGrid() {
         <img
           id="proset"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/proset copy.jpg"
+          src={prosetCopy}
           alt="proset"
         />
       </div>
@@ -141,7 +161,7 @@ export default function ImageGrid() {
         <img
           id="unknown"
           className="h-full w-full object-cover"
-          src="art/src/assets/images/pocket/unknown.jpg"
+          src={unknown}
           alt="unknown"
         />
       </div>
