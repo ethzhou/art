@@ -1,3 +1,4 @@
+import self2 from "./assets/images/pocket/self2.jpg";
 import ImageGrid from "./components/ImageGrid";
 
 export default function App() {
@@ -93,7 +94,7 @@ export default function App() {
           </div>
           <img
             className="h-full w-auto object-scale-down"
-            src="art/src/assets/images/pocket/self2.jpg"
+            src={self2}
             alt="self2"
           />
         </div>
