@@ -86,7 +86,7 @@ export default function ImageItem({
         ref={modalDivRef}
         className="fixed left-0 top-0 hidden h-screen w-screen cursor-pointer select-none bg-slate-900/90 opacity-0"
       >
-        <div className="grid h-full w-full grid-cols-[1fr_max-content_1fr] place-content-center">
+        <div className="grid h-full w-full grid-cols-[1fr_auto_1fr] place-content-center">
           <img
             ref={modalImgRef}
             className="pointer-events-none z-[1] col-start-2 max-h-[90vh] max-w-[60vw]"
