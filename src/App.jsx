@@ -1,8 +1,11 @@
 import React, { createContext } from "react";
 import self2 from "./assets/images/pocket/self2.jpg";
 import ImageGrid from "./components/ImageGrid";
+import imageData from "./imageData.json";
 
 export default function App() {
+  const { images } = imageData;
+
   return (
     <>
       <div className="border-0 border-b-4 border-dashed"></div>

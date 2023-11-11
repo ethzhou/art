@@ -2,12 +2,14 @@ import { useEffect, useRef } from "react";
 
 export default function ImageItem({
   name,
+  description,
   rowSpan,
   colSpan,
   originalFileFormat,
 }) {
   const imgRef = useRef();
   const modalDivRef = useRef();
+  const modalImgRef = useRef();
 
   const srcPocket = new URL(
     `../assets/images/pocket/${name}.jpg`,
@@ -27,9 +29,7 @@ export default function ImageItem({
   });
 
   function handleImageClick() {
-    modalDivRef.current.style.display = "block";
-    modalDivRef.current.addEventListener("click", handleModalClick);
-    document.addEventListener("keydown", handleModalKeyDown);
+    openModal();
   }
 
   function handleModalClick() {
@@ -42,8 +42,26 @@ export default function ImageItem({
     closeModal();
   }
 
+  function openModal() {
+    modalDivRef.current.style.display = "block";
+    modalDivRef.current.animate(
+      { opacity: "1" },
+      { duration: 100, fill: "forwards" },
+    );
+    modalImgRef.current.animate(
+      { transition: "translateY(-150px)" },
+      { duration: 100, fill: "forwards" },
+    );
+
+    modalDivRef.current.addEventListener("click", handleModalClick);
+    document.addEventListener("keydown", handleModalKeyDown);
+  }
+
   function closeModal() {
     modalDivRef.current.style.display = "none";
+    modalDivRef.current.getAnimations()[0]?.cancel();
+    modalImgRef.current.getAnimations()[0].cancel();
+
     modalDivRef.current.removeEventListener("click", handleModalClick);
     document.removeEventListener("keydown", handleModalKeyDown);
   }
@@ -59,21 +77,28 @@ export default function ImageItem({
       <img
         ref={imgRef}
         id={name}
-        className="pointer-events-auto h-full w-full cursor-pointer object-cover"
+        className="h-full w-full cursor-pointer object-cover"
         src={srcPocket}
         alt={name}
       />
       {/* Modal image */}
       <div
         ref={modalDivRef}
-        className="fixed left-0 top-0 hidden h-full w-full cursor-pointer bg-slate-900/90"
+        className="fixed left-0 top-0 hidden h-screen w-screen cursor-pointer select-none bg-slate-900/90 opacity-0"
       >
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="grid h-full w-full grid-cols-[1fr_max-content_1fr] place-content-center">
           <img
-            className="z-[1] col-start-2 h-[95%] w-[95%] object-contain"
+            ref={modalImgRef}
+            className="pointer-events-none z-[1] col-start-2 max-h-[90vh] max-w-[60vw]"
             src={srcOriginal}
             alt={name}
           />
+          <div className="col-start-3 p-4">
+            <h3 className="my-2 font-text text-4xl text-slate-100">{name}</h3>
+            <p className="select-auto font-text text-slate-200">
+              {description}
+            </p>
+          </div>
         </div>
       </div>
     </div>
