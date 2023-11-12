@@ -47,7 +47,7 @@ export default function App() {
                 alt="self2"
               />
               <img
-                className="pointer-events-none absolute left-[50%] top-0 h-full w-full -translate-x-1/2 object-cover opacity-0 transition-opacity duration-150 group-hover:opacity-100"
+                className="pointer-events-none absolute left-[50%] top-0 h-full w-full -translate-x-1/2 object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                 src={postamc12a2022}
                 alt="postamc12a2022"
               />
