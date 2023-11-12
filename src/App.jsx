@@ -1,5 +1,7 @@
 import React, { createContext } from "react";
 import self2 from "./assets/images/pocket/self2.jpg";
+import postamc12a2022 from "./assets/images/pocket/postamc12a2022.jpg";
+import ethanzhou from "./assets/ethanzhou.svg";
 import ImageGrid from "./components/ImageGrid";
 import imageData from "./imageData.json";
 
@@ -38,13 +40,20 @@ export default function App() {
                 </div>
               </nav>
             </div>
-            <img
-              className="h-full w-auto object-scale-down"
-              src={self2}
-              alt="self2"
-            />
+            <div className="group relative">
+              <img
+                className="h-full w-auto object-scale-down"
+                src={self2}
+                alt="self2"
+              />
+              <img
+                className="pointer-events-none absolute left-[50%] top-0 h-full w-full -translate-x-1/2 object-cover opacity-0 transition-opacity duration-150 group-hover:opacity-100"
+                src={postamc12a2022}
+                alt="postamc12a2022"
+              />
+            </div>
           </div>
-          <div>
+          <div className="relative">
             <div className="mb-2 font-display text-2xl lowercase text-zinc-500">
               click on an image to view its entirety, and then press{" "}
               <span className="inline-flex items-center rounded border-solid bg-slate-100 p-1 font-mono text-2xl">
@@ -53,9 +62,9 @@ export default function App() {
               or click again to exit the modal.
             </div>
             <ImageGrid />
-          </div>
-          <div className="absolute bottom-0 right-0 font-hand mix-blend-difference">
-            ethzhou
+            <div className="absolute bottom-0 right-0 -z-50 font-hand mix-blend-difference">
+              <img className="w-80" src={ethanzhou} alt="ethan zhou gregg" />
+            </div>
           </div>
         </div>
       </ImagesContext.Provider>
@@ -63,24 +72,4 @@ export default function App() {
   );
 }
 
-const images = [
-  { name: "ezhou_A", colSpan: 12, rowSpan: 1 },
-  { name: "Intimacy", colSpan: 3, rowSpan: 2, originalFileFormat: "png" },
-  { name: "ezhou_B", colSpan: 5, rowSpan: 2 },
-  { name: "jaw", colSpan: 4, rowSpan: 1, originalFileFormat: "png" },
-  { name: "gatsby", colSpan: 4, rowSpan: 4, originalFileFormat: "png" },
-  { name: "rushmore", colSpan: 8, rowSpan: 1 },
-  { name: "Tyler", colSpan: 2, rowSpan: 1 },
-  { name: "Arda", colSpan: 2, rowSpan: 1 },
-  { name: "Kai", colSpan: 2, rowSpan: 1 },
-  { name: "Ryan", colSpan: 2, rowSpan: 1 },
-  { name: "rhapsody", colSpan: 8, rowSpan: 5 },
-  { name: "self1", colSpan: 4, rowSpan: 1 },
-  { name: "Kline", colSpan: 4, rowSpan: 2, originalFileFormat: "png" },
-  { name: "love_letter", colSpan: 4, rowSpan: 2 },
-  { name: "ezhou_C", colSpan: 4, rowSpan: 3 },
-  { name: "proset", colSpan: 4, rowSpan: 3 },
-  { name: "postamc12a2022", colSpan: 4, rowSpan: 2, originalFileFormat: "png" },
-];
-
-export const ImagesContext = createContext(images);
+export const ImagesContext = createContext();
